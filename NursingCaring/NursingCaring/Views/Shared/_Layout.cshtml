@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="left_menu">
+        <div id="left_menu_L1">
+            <img alt="" src="~/image/menu.png" class="left_menu_click" />
+        </div>
+        <div id="left_menu_L2">
+            <img alt="" src="~/image/icon_78x78.png" class="left_menu_icon" />
+        </div>
+        <div id="left_menu_L3">
+            <ul>
+                <li><a class="menu_link">醫療團隊值班人員</a></li>
+                <li><a class="menu_link" href="home.aspx">消防333編組</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="title">
+        <div id="menu_img">
+            <img id="menu_img_click" alt="" src="~/image/menu.png" />
+        </div>
+        <div class="title_left">
+            <span id="Title_Station" class="Title_Station">19</span>
+            <span id="Label1" class="Title_Other1">樓護理站</span>
+            <span id="Label2" class="Title_Other2">床位數 : </span>
+            <span id="bed_num" class="Title_Other3">20</span>
+            <span id="Label4" class="Title_Other2">佔床率 : </span>
+            <span id="bed_score" class="Title_Other3">20%</span>
+            <span id="Label6" class="Title_Other2">病房主任 : </span>
+            <span id="station_manager" class="Title_Other3">陳主任</span>
+            <!--<asp:Label ID="Label8" runat="server" Text="護理長 : " CssClass ="Title_Other2"></asp:Label>
+            <asp:Label ID="Label9" runat="server" Text="陳護理" CssClass ="Title_Other3"></asp:Label>-->
+        </div>
+        <div class="title_right">
+            <span id="lblDate" class="Title_Other4">2019-07-11（星期四）</span>
+            <span id="Label3" class="Title_Other4">護理長 : </span><span id="station_leader" class="Title_Other4" Font-Bold="True">陳護理</span>
+        </div>
+    </div>
+    <div class="detail">
+        @RenderBody()
+    </div>
+    <hr />
+    <div class="footer">
+        <footer>
+            <span id="Label5" class="Footer_Other1">最後更新時間：</span>
+            <span id="Update_Time" class="Footer_Other1">2017-01-20 14:42</span>
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

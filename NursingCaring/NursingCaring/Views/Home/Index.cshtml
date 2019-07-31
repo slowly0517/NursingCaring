@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+
+<div class="detail_top">
+    <ul>
+        <li><img id="Image1" class="detail_top_img" src="~/image/icon_40x40_blue.png" /></li>
+        <li><span id="Detail_Menu_Title" class="Detail_Menu">消防/333編組</span></li>
+    </ul>
+</div>
+<div class="detail_Content_L1">
+    <!--藍綠底-->
+    <div class="detail_Content_L2">
+        <!--白底-->
+        <table style="width:100%;">
+            <tr id="table_title">
+                <td style="width:4%"></td>
+                <td style="width:28%">消防編組</td>
+                <td style="width:9%">點班</td>
+                <td style="width:9%">333支援</td>
+                <td style="width:10%">接病人排序</td>
+                <td style="width:9%">負責護士</td>
+                <!--<td style="width:16%">分配床號</td>-->
+            </tr>
+        </table>
+        <div id="detail_table2_outer">
+
+            <table style="width:100%;" id="detail_tableD" class="detail_table">
+                <!--早班-->
+                <script id="dtTemplateD" type="text/x-jquery-tmpl">
+                    {{if classid == "0"}}
+                    <tr>
+                        <td style="width:28%; text-align: left; padding-left: 23px;">${group_fire_name}</td><!--消防編組-->
+                        <td class="colorful" style="width:9%">${call}</td><!--點班-->
+                        <td style="width:9%">${eenum}</td><!--333支援-->
+                        <td class="colorful" style="width:10%">${ttnum}</td><!--接病人排序-->
+                        <td style="width:9%">${name}</td><!--負責護士-->
+                        <!--<td class="colorful" style="width:16%">&nbsp;</td><!--分配床號-->-->
+                    </tr>
+                    {{/if}}
+                </script>
+            </table>
+
+            <table style="width:100%;" id="detail_tableE" class="detail_table">
+                <!--小夜班-->
+                <script id="dtTemplateE" type="text/x-jquery-tmpl">
+                    {{if classid == "1"}}
+                    <tr>
+                        <td style="width:28%; text-align: left; padding-left: 23px;">${group_fire_name}</td><!--消防編組-->
+                        <td class="colorful" style="width:9%">${call}</td><!--點班-->
+                        <td style="width:9%">${eenum}</td><!--333支援-->
+                        <td class="colorful" style="width:10%">${ttnum}</td><!--接病人排序-->
+                        <td style="width:9%">${name}</td><!--負責護士-->
+                        <!--<td class="colorful" style="width:16%">&nbsp;</td><!--分配床號-->-->
+                    </tr>
+                    {{/if}}
+                </script>
+            </table>
+
+            <table style="width:100%;" id="detail_tableN" class="detail_table">
+                <!--大夜班-->
+                <script id="dtTemplateN" type="text/x-jquery-tmpl">
+                    {{if classid == "2"}}
+                    <tr>
+                        <td style="width:28%; text-align: left; padding-left: 23px;">${group_fire_name}</td><!--消防編組-->
+                        <td class="colorful" style="width:9%">${call}</td><!--點班-->
+                        <td style="width:9%">${eenum}</td><!--333支援-->
+                        <td class="colorful" style="width:10%">${ttnum}</td><!--接病人排序-->
+                        <td style="width:9%">${name}</td><!--負責護士-->
+                        <!--<td class="colorful" style="width:16%">&nbsp;</td><!--分配床號-->-->
+                    </tr>
+                    {{/if}}
+                </script>
+            </table>
+
+
+        </div>
+        <div id="more_button_outer">
+            <!--更多button-->
+            <input id="more_button" class="more_button" type="button" value="更多" />
+        </div>
+    </div><!--白底-->
+</div><!--藍綠底-->
